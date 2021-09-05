@@ -13,3 +13,6 @@ Git 2.30.0
 To download the project, simply open a terminal window and execute the following command :
 https://github.com/2021-DEV1-087/Tic-Tac-Toe.git
 
+**Test**
+All tests are in "com.game.tictoctoe.TictoctoeApplicationTests.java"
+cd to the project directory and execute : mvn test
