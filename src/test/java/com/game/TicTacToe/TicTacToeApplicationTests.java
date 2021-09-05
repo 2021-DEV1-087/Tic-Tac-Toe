@@ -1,5 +1,9 @@
 package com.game.TicTacToe;
 
+import com.game.TicTacToe.enums.Piece;
+import com.game.TicTacToe.exceptions.FirstPlayerException;
+import com.game.TicTacToe.model.Game;
+import com.game.TicTacToe.model.Player;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -29,3 +33,5 @@ class TicTacToeApplicationTests {
 		assertThrows(FirstPlayerException.class, () -> game.play(playerO));
 	}
 }
+
+
