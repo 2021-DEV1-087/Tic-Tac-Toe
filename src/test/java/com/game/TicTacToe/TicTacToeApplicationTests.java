@@ -1,5 +1,6 @@
 package com.game.TicTacToe;
 
+import com.game.TicTacToe.enums.GameStatus;
 import com.game.TicTacToe.enums.Piece;
 import com.game.TicTacToe.exceptions.FirstPlayerException;
 import com.game.TicTacToe.exceptions.NextPlayerIsTheSameOneException;
@@ -59,55 +60,54 @@ class TicTacToeApplicationTests {
 		assertThrows(PositionOutsideBoardException.class, () -> game.play(5, 5, playerX));
 	}
 
-	/* scenario :Board is full ,game over with Winner, diagonal from right line
+	/* scenario :Board is full ,game WIN with Winner, diagonal from right line
        0 O X
 	   O X X
 	   X O X
     */
 	@Test
-	void whenBoardIsFullWithWinnerThenGameIsOver() {
+	void whenBoardIsFullWithWinnerThenGameIsWIN() {
 		game.play(1, 3, playerX); // the Player X is always the First
 		game.play(1, 1, playerO); // alternative player
 		game.play(2, 3, playerX);
 		game.play(1, 2, playerO);
-		game.play(1, 3, playerX);
 		game.play(2, 2, playerX);
 		game.play(2, 1, playerO);
 		game.play(3, 1, playerX);
 		game.play(3, 2, playerO);
 		game.play(3, 3, playerX);
-		assertEquals(game.getGameStatus(), GameStatus.OVER);
+		assertEquals(game.getGameStatus(), GameStatus.WIN);
 
 	}
-	/* scenario :board not completely full , game over with winner, first vertical line
+	/* scenario :board not completely full , game WIN with winner, first vertical line
        X O O
        X . .
        X . .
     */
 	@Test
-	void whenOneOfPlayerFillUpThreeVerticalSuccessiveMarkersThenGameIsOver() {
+	void whenOneOfPlayerFillUpThreeVerticalSuccessiveMarkersThenGameIsWIN() {
 		game.play(1, 1, playerX); // the Player X is always the First
 		game.play(1, 2, playerO);// alternative player
 		game.play(2, 1, playerX);
 		game.play(1, 3, playerO);
 		game.play(3, 1, playerX);
-		assertEquals(game.getGameStatus(), GameStatus.OVER);
+		assertEquals(game.getGameStatus(), GameStatus.WIN);
 	}
-	/* scenario: board not completely full , game over with winner, first horizontal line
+	/* scenario: board not completely full , game WIN with winner, first horizontal line
        X X X
 	   . O .
 	   . O .
     */
 	@Test
-	void whenOneOfPlayerFillUpThreeHorizontalSuccessiveMarkersThenGameIsOver() {
+	void whenOneOfPlayerFillUpThreeHorizontalSuccessiveMarkersThenGameIsWIN() {
 		game.play(1, 1, playerX); // the Player X is always the First
 		game.play(2, 2, playerO); // alternative player
 		game.play(1, 2, playerX);
 		game.play(3, 2, playerO);
 		game.play(1, 3, playerX);
-		assertEquals(game.getGameStatus(), GameStatus.OVER);
+		assertEquals(game.getGameStatus(), GameStatus.WIN);
 	}
-	/* scenario :board is full and game over without winner => Draw
+	/* scenario :board is full and game WIN without winner => Draw
        O X X
 	   X O O
 	   X O X
@@ -126,36 +126,36 @@ class TicTacToeApplicationTests {
 		assertEquals(game.getGameStatus(), GameStatus.DRAW);
 
 	}
-	/* scenario :board not completely full, game over with winner, diagonal from left line
+	/* scenario :board not completely full, game WIN with winner, diagonal from left line
        X . .
 	   O X .
 	   . O X
     */
 
 	@Test
-	void whenOneOfPlayerFillUpThreeDiagonalFromLeftSuccessiveMarkersThenGameIsOver() {
+	void whenOneOfPlayerFillUpThreeDiagonalFromLeftSuccessiveMarkersThenGameIsWIN() {
 		game.play(1, 1, playerX); // the Player X is always the First
 		game.play(2, 1, playerO);// alternative player
 		game.play(2, 2, playerX);
 		game.play(3, 2, playerO);
 		game.play(3, 3, playerX);
-		assertEquals(game.getGameStatus(), GameStatus.OVER);
+		assertEquals(game.getGameStatus(), GameStatus.WIN);
 	}
 
 
-	/* scenario :board not completely full , game over with Winner, diagonal from right line
+	/* scenario :board not completely full , game WIN with Winner, diagonal from right line
        . . X
        O X .
        X O .
     */
 	@Test
-	void whenOneOfPlayerFillUpThreeDiagonalRightSuccessiveMarkersThenGameisOver() {
-		game.play(1, 3, playerX); // First Pleyer now is playerX
-		game.play(2, 1, playerO);
+	void whenOneOfPlayerFillUpThreeDiagonalRightSuccessiveMarkersThenGameisWIN() {
+		game.play(1, 3, playerX); // the Player X is always the First
+		game.play(2, 1, playerO); // alternative player
 		game.play(2, 2, playerX);
 		game.play(3, 2, playerO);
 		game.play(3, 1, playerX);
-		assertEquals(game.getGameStatus(), GameStatus.OVER);
+		assertEquals(game.getGameStatus(), GameStatus.WIN);
 
 	}
 }
