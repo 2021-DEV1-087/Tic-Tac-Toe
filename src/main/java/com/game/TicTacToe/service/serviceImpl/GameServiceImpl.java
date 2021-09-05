@@ -10,8 +10,8 @@ public class GameServiceImpl implements GameService {
     private Game game;
 
     @Override
-    public Game play(int positionX, int PositionY, Player player) {
-        this.game.play(positionX, PositionY, player);
+    public Game play(int positionX, int positionY, Player player) {
+        this.game.play(positionX, positionY, player);
         return this.game;
     }
 }

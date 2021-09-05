@@ -26,3 +26,8 @@ Once started, the API is available at the http://localhost:8080/tic-tac-toe/api
 **How to play the game?**
 To place a move, POST to the http://localhost:8080/tic-tac-toe/api/playTheGame url with the RequestGamingDto information in the body :
 RequestGamingDto { "playerSymbol": "X", "positionX": 2, "positionY": 2}
+
+**Documentation and test  with openApi and swagger**
+There is no client has been developed, but it's possible to interact and test the API through swagger openApi url:
+http://localhost:8080/swagger-ui-custom.html
+
