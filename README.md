@@ -30,4 +30,6 @@ RequestGamingDto { "playerSymbol": "X", "positionX": 2, "positionY": 2}
 **Documentation and test  with openApi and swagger**
 There is no client has been developed, but it's possible to interact and test the API through swagger openApi url:
 http://localhost:8080/swagger-ui-custom.html
+http://localhost:8080/api-docs
+
 
