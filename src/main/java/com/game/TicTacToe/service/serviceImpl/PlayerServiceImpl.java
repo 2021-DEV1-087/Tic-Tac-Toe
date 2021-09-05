@@ -4,11 +4,13 @@ import com.game.TicTacToe.enums.Piece;
 import com.game.TicTacToe.exceptions.PlayerNotFoundException;
 import com.game.TicTacToe.model.Player;
 import com.game.TicTacToe.service.PlayerService;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class PlayerServiceImpl implements PlayerService {
 
     private final List<Player> players;

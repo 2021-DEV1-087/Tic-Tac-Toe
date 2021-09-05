@@ -19,3 +19,10 @@ cd to the project directory and execute : mvn test
 
 **Running the project**
 In a terminal window, cd to the project directory and execute : mvn spring-boot:run
+
+**Interacting with the game API**
+Once started, the API is available at the http://localhost:8080/tic-tac-toe/api
+
+**How to play the game?**
+To place a move, POST to the http://localhost:8080/tic-tac-toe/api/playTheGame url with the RequestGamingDto information in the body :
+RequestGamingDto { "playerSymbol": "X", "positionX": 2, "positionY": 2}
