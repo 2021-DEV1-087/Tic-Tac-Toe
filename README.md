@@ -16,3 +16,6 @@ https://github.com/2021-DEV1-087/Tic-Tac-Toe.git
 **Test**
 All tests are in "com.game.tictoctoe.TictoctoeApplicationTests.java"
 cd to the project directory and execute : mvn test
+
+**Running the project**
+In a terminal window, cd to the project directory and execute : mvn spring-boot:run

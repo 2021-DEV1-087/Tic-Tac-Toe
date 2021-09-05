@@ -2,6 +2,9 @@ package com.game.TicTacToe;
 
 import com.game.TicTacToe.enums.Piece;
 import com.game.TicTacToe.exceptions.FirstPlayerException;
+import com.game.TicTacToe.exceptions.NextPlayerIsTheSameOneException;
+import com.game.TicTacToe.exceptions.PositionAlreadyOccupied;
+import com.game.TicTacToe.exceptions.PositionOutsideBoardException;
 import com.game.TicTacToe.model.Game;
 import com.game.TicTacToe.model.Player;
 import org.junit.jupiter.api.BeforeEach;

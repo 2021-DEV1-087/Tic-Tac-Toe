@@ -7,9 +7,9 @@ public enum Piece {
     PLAYER_X("X"),
     PLAYER_O("O");
 
-    private final String piece;
+    private final String pieceSymbol;
 
-    Piece(String piece) {
-        this.piece = piece;
+    Piece(String pieceSymbol) {
+        this.pieceSymbol = pieceSymbol;
     }
 }
